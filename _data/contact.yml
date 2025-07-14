@@ -5,6 +5,7 @@
 
 - type: twitter
   icon: "fa-brands fa-x-twitter"
+  noblank: false
 
 - type: email
   icon: "fas fa-envelope"
