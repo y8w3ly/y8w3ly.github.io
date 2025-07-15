@@ -45,7 +45,7 @@
 <meta property="twitter:title" content="L3akCTF2025" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-07-15T01:58:57-01:00","datePublished":"2025-07-14T10:16:00-01:00","description":"Writeups of challenges in solved in L3akCTF2025","headline":"L3akCTF2025","image":"http://localhost:4000/assets/img/L3ak25/icon.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/L3akCTF2025/"},"url":"http://localhost:4000/posts/L3akCTF2025/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-07-15T02:11:03-01:00","datePublished":"2025-07-14T10:16:00-01:00","description":"Writeups of challenges in solved in L3akCTF2025","headline":"L3akCTF2025","image":"http://localhost:4000/assets/img/L3ak25/icon.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/L3akCTF2025/"},"url":"http://localhost:4000/posts/L3akCTF2025/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -775,6 +775,43 @@
 
       
     
+
+    
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -1001,11 +1038,6 @@
     
 
     
-  
-
-  
-  
-
   
 
   
@@ -1073,7 +1105,7 @@
 
 <time
   
-  data-ts="1752548337"
+  data-ts="1752549063"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -1171,10 +1203,10 @@
   <div class="content">
     <p>Last weekend, I participated in L3akCTF2025 and solved some Crypto challenges ,and those are my writeups for most of the challenges I solved(and upsolved).</p>
 
-<h1 id="cryptodumber">Crypto/Dumber</h1>
+<h2 id="cryptodumber"><span class="me-2">Crypto/Dumber</span><a href="#cryptodumber" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <p><a href="/assets/img/L3ak25/dumber.png" class="popup img-link shimmer"><img src="/assets/img/L3ak25/dumber.png" alt="Dumber" loading="lazy"></a></p>
 
-<h2 id="challenge-overview"><span class="me-2">Challenge Overview</span><a href="#challenge-overview" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="challenge-overview"><span class="me-2">Challenge Overview</span><a href="#challenge-overview" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li><strong>Category</strong>: Crypto</li>
@@ -1183,11 +1215,11 @@
   <li><strong>Description</strong>: Don’t try to outsmart me buddy.</li>
 </ul>
 
-<h2 id="tldr"><span class="me-2">TL;DR</span><a href="#tldr" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="tldr"><span class="me-2">TL;DR</span><a href="#tldr" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>In this challenge, we’re given two elliptic curve points derived by multiplying parts of the flag (converted to integers) with random points on a hidden elliptic curve. Our job is to recover the modulus and curve coefficients, then perform discrete logarithms to extract the flag.</p>
 
-<h2 id="initial-analysis"><span class="me-2">Initial Analysis</span><a href="#initial-analysis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="initial-analysis"><span class="me-2">Initial Analysis</span><a href="#initial-analysis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li>We’re provided a Python file <code class="language-plaintext highlighter-rouge">chall.py</code> that generates two elliptic curve points</li>
@@ -1246,25 +1278,25 @@
 (95406403280474692216804281695624776780 : 109560844064302254814641159241201048462 : 1)
 </pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="task-analysis"><span class="me-2">Task Analysis</span><a href="#task-analysis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="task-analysis"><span class="me-2">Task Analysis</span><a href="#task-analysis" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<h3 id="given"><span class="me-2">Given</span><a href="#given" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h4 id="given"><span class="me-2">Given</span><a href="#given" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <ul>
   <li>Coordinates of 4 points supposedly lying on an unknown elliptic curve over a finite field.</li>
   <li>Two of them are the result of scalar multiplication: <code class="language-plaintext highlighter-rouge">u = pt1 × p</code>, <code class="language-plaintext highlighter-rouge">v = pt2 × q</code>.</li>
 </ul>
 
-<h3 id="goal"><span class="me-2">Goal</span><a href="#goal" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h4 id="goal"><span class="me-2">Goal</span><a href="#goal" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <ul>
   <li>Recover a,b and the prime.</li>
   <li>Solve the dlp to get the two parts of the flag and decode them into bytes to get the flag.</li>
 </ul>
 
-<h2 id="the-attack"><span class="me-2">The Attack</span><a href="#the-attack" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="the-attack"><span class="me-2">The Attack</span><a href="#the-attack" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<h3 id="1-recover-the-modulus"><span class="me-2">1. Recover the modulus</span><a href="#1-recover-the-modulus" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h4 id="1-recover-the-modulus"><span class="me-2">1. Recover the modulus</span><a href="#1-recover-the-modulus" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <ul>
   <li>we all know that elliptic curves over finite fields satisfy the equation: <code class="language-plaintext highlighter-rouge">y^2 ≡ x^3 + ax + b [p]</code>.</li>
@@ -1281,7 +1313,7 @@
   <li>if we do this for two or more points we can calculate their pgcd and get p.</li>
 </ul>
 
-<h3 id="2-recover-curve-coefficients-a-and-b"><span class="me-2">2. Recover Curve Coefficients <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code></span><a href="#2-recover-curve-coefficients-a-and-b" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h4 id="2-recover-curve-coefficients-a-and-b"><span class="me-2">2. Recover Curve Coefficients <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code></span><a href="#2-recover-curve-coefficients-a-and-b" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <ul>
   <li>with <code class="language-plaintext highlighter-rouge">p</code> known, plug in the coordinates of two points into the elliptic curve equation to form two equations:</li>
@@ -1294,14 +1326,14 @@
   <li><code class="language-plaintext highlighter-rouge">b = (r1 - a * x1) % p</code></li>
 </ul>
 
-<h3 id="3-rebuild-the-curve-and-points"><span class="me-2">3. Rebuild the Curve and Points</span><a href="#3-rebuild-the-curve-and-points" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h4 id="3-rebuild-the-curve-and-points"><span class="me-2">3. Rebuild the Curve and Points</span><a href="#3-rebuild-the-curve-and-points" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <ul>
   <li>With p, a, b known, reconstruct the elliptic curve over <code class="language-plaintext highlighter-rouge">GF(p)</code> and re-create the points <code class="language-plaintext highlighter-rouge">p</code>,<code class="language-plaintext highlighter-rouge">u</code>,<code class="language-plaintext highlighter-rouge">v</code>,<code class="language-plaintext highlighter-rouge">q</code> 
           <code class="language-plaintext highlighter-rouge">E = EllipticCurve(GF(p), [a, b])</code></li>
 </ul>
 
-<h3 id="4-solve-the-discrete-logarithm-problem"><span class="me-2">4. Solve the Discrete Logarithm Problem</span><a href="#4-solve-the-discrete-logarithm-problem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h4 id="4-solve-the-discrete-logarithm-problem"><span class="me-2">4. Solve the Discrete Logarithm Problem</span><a href="#4-solve-the-discrete-logarithm-problem" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <p>Using sagemath’s <code class="language-plaintext highlighter-rouge">.log()</code> is enough to solve the ecdlp cuz the group order is small enough.
 So :</p>
@@ -1310,7 +1342,7 @@ So :</p>
   <li><code class="language-plaintext highlighter-rouge">pt2 = v.log(q)</code></li>
 </ul>
 
-<h2 id="conclusion"><span class="me-2">Conclusion</span><a href="#conclusion" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="conclusion"><span class="me-2">Conclusion</span><a href="#conclusion" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>Here is the full solve script :</p>
 
@@ -1432,11 +1464,11 @@ So :</p>
 
 <p>Finally “Dumber” is anything but dumb.</p>
 
-<h1 id="cryptosecret">Crypto/Secret²</h1>
+<h2 id="cryptosecret"><span class="me-2">Crypto/Secret²</span><a href="#cryptosecret" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p><a href="/assets/img/L3ak25/secret\ squared.png" class="popup img-link shimmer"><img src="/assets/img/L3ak25/secret\ squared.png" alt="Secret²" loading="lazy"></a></p>
+<p><a href="/assets/img/L3ak25/secret.png" class="popup img-link shimmer"><img src="/assets/img/L3ak25/secret.png" alt="Secret²" loading="lazy"></a></p>
 
-<h2 id="challenge-overview-1"><span class="me-2">Challenge Overview</span><a href="#challenge-overview-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="challenge-overview-1"><span class="me-2">Challenge Overview</span><a href="#challenge-overview-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <ul>
   <li><strong>Category</strong>: Crypto</li>
@@ -1445,11 +1477,11 @@ So :</p>
   <li><strong>Description</strong>: Two secrets lie intertwined inside a strange equation. Can you unravel this mathematical mystery and find the truth hidden within?</li>
 </ul>
 
-<h2 id="tldr-1"><span class="me-2">TL;DR</span><a href="#tldr-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="tldr-1"><span class="me-2">TL;DR</span><a href="#tldr-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>The challenge hides two secret integers within a modular arithmetic expression. Given only the square of their relationship, we model the problem algebraically and use Coppersmith’s method on a cleverly constructed bivariate polynomial to recover both secrets. Flag obtained by decoding the two integers.</p>
 
-<h2 id="initial-analysis-1"><span class="me-2">Initial Analysis</span><a href="#initial-analysis-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="initial-analysis-1"><span class="me-2">Initial Analysis</span><a href="#initial-analysis-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>We’re provided this code :</p>
 <div class="language-python highlighter-rouge"><div class="code-header">
@@ -1503,7 +1535,7 @@ So :</p>
 Our goal is to recover <code class="language-plaintext highlighter-rouge">s1</code> and <code class="language-plaintext highlighter-rouge">s2</code> from <code class="language-plaintext highlighter-rouge">k</code> and <code class="language-plaintext highlighter-rouge">p</code></li>
 </ul>
 
-<h2 id="task-analysis-1"><span class="me-2">Task Analysis</span><a href="#task-analysis-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="task-analysis-1"><span class="me-2">Task Analysis</span><a href="#task-analysis-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>We are working in modular arithmetic, and the expression involves a fraction: <code class="language-plaintext highlighter-rouge">(s1 / s2 + c)^2 ≡ k [p]</code>
 Multiply both sides by <code class="language-plaintext highlighter-rouge">s2^2</code> to eliminate the denominator: <code class="language-plaintext highlighter-rouge">(s1 + c * s2)^2 ≡ k * s2^2 [p]</code>
@@ -1512,9 +1544,9 @@ This becomes our polynomial equation: <code class="language-plaintext highlighte
 This is a bivariate modular equation over a large modulus, and we are looking for small integer roots (s1, s2).
 That’s a textbook case for Coppersmith’s method for bivariate modular equations.</p>
 
-<h2 id="the-attack-1"><span class="me-2">The Attack</span><a href="#the-attack-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="the-attack-1"><span class="me-2">The Attack</span><a href="#the-attack-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<h3 id="1-express-as-a-polynomial"><span class="me-2">1. Express as a polynomial</span><a href="#1-express-as-a-polynomial" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h4 id="1-express-as-a-polynomial"><span class="me-2">1. Express as a polynomial</span><a href="#1-express-as-a-polynomial" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 <div class="language-python highlighter-rouge"><div class="code-header">
         <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -1524,7 +1556,7 @@ That’s a textbook case for Coppersmith’s method for bivariate modular equati
 </pre></td></tr></tbody></table></code></div></div>
 <p>This is our target <code class="language-plaintext highlighter-rouge">f(x, y) = 0 [p]</code></p>
 
-<h3 id="2-apply-coppersmiths-bivariate-attack"><span class="me-2">2. Apply Coppersmith’s Bivariate Attack</span><a href="#2-apply-coppersmiths-bivariate-attack" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h4 id="2-apply-coppersmiths-bivariate-attack"><span class="me-2">2. Apply Coppersmith’s Bivariate Attack</span><a href="#2-apply-coppersmiths-bivariate-attack" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 <p>The modulus is too big to be factored so we can’t just take a modular square root.
 Basically the trick is like bivariate coppersmith, but using polynomial gcd instead of something like jacobian-newton or groebner for the root solving!
 Coppersmith’s method can find small solutions <code class="language-plaintext highlighter-rouge">(x₀, y₀)</code> to <code class="language-plaintext highlighter-rouge">f(x, y) ≡ 0 [p]</code>, given:</p>
@@ -1538,7 +1570,7 @@ Coppersmith’s method can find small solutions <code class="language-plaintext 
 
 <p>This constructs a lattice of shifted polynomials based on <code class="language-plaintext highlighter-rouge">f</code>, <code class="language-plaintext highlighter-rouge">m</code>, and <code class="language-plaintext highlighter-rouge">d</code>, performs LLL reduction, and attempts to extract a polynomial with small integer roots.</p>
 
-<h3 id="3-root-extraction"><span class="me-2">3. Root Extraction</span><a href="#3-root-extraction" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h4 id="3-root-extraction"><span class="me-2">3. Root Extraction</span><a href="#3-root-extraction" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 <p>Once the lattice is reduced, we try to extract <code class="language-plaintext highlighter-rouge">g(x, y)</code> that vanishes at the true <code class="language-plaintext highlighter-rouge">(s1, s2)</code>:
 <code class="language-plaintext highlighter-rouge">g = gcd(H[1][1], H[1][0])</code>
 The GCD of reduced polynomials in the basis often reveals a factorized form: <code class="language-plaintext highlighter-rouge">g(x, y) = (x - s1)(y - s2)</code> or similar
@@ -1546,7 +1578,7 @@ So if we print g it will look like :
 <code class="language-plaintext highlighter-rouge">172173800672395117345249995446056910949109406728104215721153693572084689971*x - 2473487831244918725787012641969681114920403880867347529915152738869122001520439638*y</code>
 So <code class="language-plaintext highlighter-rouge">(x,y)=2473487831244918725787012641969681114920403880867347529915152738869122001520439638 ,172173800672395117345249995446056910949109406728104215721153693572084689971</code> Is a root for g.</p>
 
-<h2 id="conclusion-1"><span class="me-2">Conclusion</span><a href="#conclusion-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h3 id="conclusion-1"><span class="me-2">Conclusion</span><a href="#conclusion-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>Here is the full solve script written in sage :</p>
 
