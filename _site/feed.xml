@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>y8w3ly</title>
   <subtitle>Computer Science Student | Beginner CTF Player</subtitle>
-  <updated>2025-07-14T19:24:31-01:00</updated>
+  <updated>2025-07-15T01:01:38-01:00</updated>
   <author>
     <name>Yanis AITOUALI</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,34 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>L3akCTF2025</title>
+    <link href="http://localhost:4000/posts/L3akCTF2025/" rel="alternate" type="text/html" title="L3akCTF2025" />
+    <published>2025-07-14T10:16:00-01:00</published>
+  
+    <updated>2025-07-14T10:16:00-01:00</updated>
+  
+    <id>http://localhost:4000/posts/L3akCTF2025/</id>
+    <content type="text/html" src="http://localhost:4000/posts/L3akCTF2025/" />
+    <author>
+      <name>Yanis AITOUALI</name>
+    </author>
+
+  
+    
+    <category term="Crypto" />
+    
+    <category term="Hash Cracking" />
+    
+    <category term="Misc" />
+    
+  
+
+  <summary>Writeups of challenges in solved in L3akCTF2025</summary>
+
+  </entry>
 
 </feed>
 
