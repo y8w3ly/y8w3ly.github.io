@@ -14,7 +14,7 @@
 
 
 <!-- `site.alt_lang` can specify a language different from the UI -->
-<html lang="en" data-mode="light">
+<html lang="en" data-mode="dark">
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
@@ -45,7 +45,7 @@
 <meta property="twitter:title" content="L3akCTF2025" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-07-14T10:16:00-01:00","datePublished":"2025-07-14T10:16:00-01:00","description":"Writeups of challenges in solved in L3akCTF2025","headline":"L3akCTF2025","image":"http://localhost:4000/assets/img/L3ak25/icon.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/L3akCTF2025/"},"url":"http://localhost:4000/posts/L3akCTF2025/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-07-15T01:58:57-01:00","datePublished":"2025-07-14T10:16:00-01:00","description":"Writeups of challenges in solved in L3akCTF2025","headline":"L3akCTF2025","image":"http://localhost:4000/assets/img/L3ak25/icon.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/L3akCTF2025/"},"url":"http://localhost:4000/posts/L3akCTF2025/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -663,6 +663,71 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -754,6 +819,72 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -769,6 +900,39 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -897,6 +1061,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1752548337"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Jul 15, 2025
+</time>
+
+        </span>
+      
 
       
         
@@ -948,9 +1135,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="858 words"
+  title="1544 words"
 >
-  <em>4 min</em> read</span>
+  <em>8 min</em> read</span>
 
         </div>
       </div>
@@ -982,7 +1169,7 @@
   
 
   <div class="content">
-    <p>Last weekend, I participated in L3akCTF2025 and solved some Crypto challenges ,and those are my writeups for most of the challenges I solved.</p>
+    <p>Last weekend, I participated in L3akCTF2025 and solved some Crypto challenges ,and those are my writeups for most of the challenges I solved(and upsolved).</p>
 
 <h1 id="cryptodumber">Crypto/Dumber</h1>
 <p><a href="/assets/img/L3ak25/dumber.png" class="popup img-link shimmer"><img src="/assets/img/L3ak25/dumber.png" alt="Dumber" loading="lazy"></a></p>
@@ -1075,7 +1262,7 @@
   <li>Solve the dlp to get the two parts of the flag and decode them into bytes to get the flag.</li>
 </ul>
 
-<h2 id="attack"><span class="me-2">Attack</span><a href="#attack" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="the-attack"><span class="me-2">The Attack</span><a href="#the-attack" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <h3 id="1-recover-the-modulus"><span class="me-2">1. Recover the modulus</span><a href="#1-recover-the-modulus" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1244,6 +1431,176 @@ So :</p>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>Finally “Dumber” is anything but dumb.</p>
+
+<h1 id="cryptosecret">Crypto/Secret²</h1>
+
+<p><a href="/assets/img/L3ak25/secret\ squared.png" class="popup img-link shimmer"><img src="/assets/img/L3ak25/secret\ squared.png" alt="Secret²" loading="lazy"></a></p>
+
+<h2 id="challenge-overview-1"><span class="me-2">Challenge Overview</span><a href="#challenge-overview-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<ul>
+  <li><strong>Category</strong>: Crypto</li>
+  <li><strong>Name</strong> :  Secret²</li>
+  <li><strong>Points</strong>: 465 (28 solves)</li>
+  <li><strong>Description</strong>: Two secrets lie intertwined inside a strange equation. Can you unravel this mathematical mystery and find the truth hidden within?</li>
+</ul>
+
+<h2 id="tldr-1"><span class="me-2">TL;DR</span><a href="#tldr-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>The challenge hides two secret integers within a modular arithmetic expression. Given only the square of their relationship, we model the problem algebraically and use Coppersmith’s method on a cleverly constructed bivariate polynomial to recover both secrets. Flag obtained by decoding the two integers.</p>
+
+<h2 id="initial-analysis-1"><span class="me-2">Initial Analysis</span><a href="#initial-analysis-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>We’re provided this code :</p>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">bytes_to_long</span> <span class="k">as</span> <span class="n">b2l</span>
+<span class="kn">from</span> <span class="n">sage.all</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">secret_1</span> <span class="o">=</span> <span class="nc">Integer</span><span class="p">(</span><span class="nf">b2l</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="s">&lt;Redacted 1&gt;</span><span class="sh">'</span><span class="p">))</span>
+<span class="n">secret_2</span> <span class="o">=</span> <span class="nc">Integer</span><span class="p">(</span><span class="nf">b2l</span><span class="p">(</span><span class="sa">b</span><span class="sh">'</span><span class="s">&lt;Redacted 2&gt;</span><span class="sh">'</span><span class="p">))</span>
+
+<span class="k">assert</span> <span class="n">secret_1</span><span class="p">.</span><span class="nf">nbits</span><span class="p">()</span> <span class="o">==</span> <span class="mi">271</span>
+<span class="k">assert</span> <span class="n">secret_2</span><span class="p">.</span><span class="nf">nbits</span><span class="p">()</span> <span class="o">==</span> <span class="mi">247</span>
+
+<span class="n">real_secret</span> <span class="o">=</span> <span class="nc">Mod</span><span class="p">(</span><span class="n">secret_1</span><span class="p">,</span><span class="nf">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1337</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1337</span><span class="p">)</span><span class="o">/</span><span class="n">secret_2</span> <span class="o">+</span> <span class="nf">pow</span><span class="p">(</span><span class="mi">1337</span><span class="p">,</span><span class="mi">1337</span><span class="p">)</span>
+<span class="n">not_secret_anymore</span> <span class="o">=</span> <span class="nf">hex</span><span class="p">(</span><span class="nf">pow</span><span class="p">(</span><span class="n">real_secret</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">not_secret_anymore</span><span class="p">)</span>
+
+<span class="c1"># assert flag  == b"L3AK{" + secret_1 + secret_2 + b"}"
+# 0xaf67951fc756caf05e1cb834854880fa6b3919aa390a42a3f2cdcc1943b959192cebea290e4bbe41b517056b95903e9f6ec10d490fdde72cf17a7ab3e65d61fc9c0a750dc20d52626f78c7200744fb9bcc0e7b9f33dd5a83df5d05de7258404b5c56ced4b57e63ab0c7c4761ce76d789734d705e8e137a2000c678c5b90b1df6169499ef39184622d4f83a03985ba8038fdb05aae52d5f2c04f8b8f7a4ac2a54b3d0be67c71752
+</span></pre></td></tr></tbody></table></code></div></div>
+
+<p>Let’s denote :</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">s1 = secret_1</code></li>
+  <li><code class="language-plaintext highlighter-rouge">s2 = secret_2</code></li>
+  <li><code class="language-plaintext highlighter-rouge">p = 2^1337 + 1337</code></li>
+  <li><code class="language-plaintext highlighter-rouge">c = 1337^1337</code></li>
+  <li><code class="language-plaintext highlighter-rouge">k = (s1/s2 + c)^2 mod p</code> (this is what its given)</li>
+</ul>
+
+<p>We know <code class="language-plaintext highlighter-rouge">s1</code> and <code class="language-plaintext highlighter-rouge">s2</code> are reasonably small <code class="language-plaintext highlighter-rouge">assert secret_1.nbits() == 271</code> so <code class="language-plaintext highlighter-rouge">s1 &lt; 2^271</code> and <code class="language-plaintext highlighter-rouge">assert secret_2.nbits() == 247</code>so <code class="language-plaintext highlighter-rouge">s2 &lt; 2^247</code> hich hints at the feasibility of Coppersmith’s attack.</p>
+
+<p>So essentially we’re told :</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">(s1/s2 + c)^2 ≡ k mod p</code>
+Our goal is to recover <code class="language-plaintext highlighter-rouge">s1</code> and <code class="language-plaintext highlighter-rouge">s2</code> from <code class="language-plaintext highlighter-rouge">k</code> and <code class="language-plaintext highlighter-rouge">p</code></li>
+</ul>
+
+<h2 id="task-analysis-1"><span class="me-2">Task Analysis</span><a href="#task-analysis-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>We are working in modular arithmetic, and the expression involves a fraction: <code class="language-plaintext highlighter-rouge">(s1 / s2 + c)^2 ≡ k [p]</code>
+Multiply both sides by <code class="language-plaintext highlighter-rouge">s2^2</code> to eliminate the denominator: <code class="language-plaintext highlighter-rouge">(s1 + c * s2)^2 ≡ k * s2^2 [p]</code>
+Bring everything to one side: <code class="language-plaintext highlighter-rouge">(s1 + c*s2)^2 - k*s2^2 ≡ 0 [p]</code>
+This becomes our polynomial equation: <code class="language-plaintext highlighter-rouge">f(s1, s2) = (s1 + c*s2)^2 - k*s2^2 ≡ 0 [p]</code>
+This is a bivariate modular equation over a large modulus, and we are looking for small integer roots (s1, s2).
+That’s a textbook case for Coppersmith’s method for bivariate modular equations.</p>
+
+<h2 id="the-attack-1"><span class="me-2">The Attack</span><a href="#the-attack-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="1-express-as-a-polynomial"><span class="me-2">1. Express as a polynomial</span><a href="#1-express-as-a-polynomial" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">PR</span><span class="p">.</span><span class="o">&lt;</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nc">PolynomialRing</span><span class="p">(</span><span class="nc">Zmod</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">c</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">k</span> <span class="o">*</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span>
+</pre></td></tr></tbody></table></code></div></div>
+<p>This is our target <code class="language-plaintext highlighter-rouge">f(x, y) = 0 [p]</code></p>
+
+<h3 id="2-apply-coppersmiths-bivariate-attack"><span class="me-2">2. Apply Coppersmith’s Bivariate Attack</span><a href="#2-apply-coppersmiths-bivariate-attack" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>The modulus is too big to be factored so we can’t just take a modular square root.
+Basically the trick is like bivariate coppersmith, but using polynomial gcd instead of something like jacobian-newton or groebner for the root solving!
+Coppersmith’s method can find small solutions <code class="language-plaintext highlighter-rouge">(x₀, y₀)</code> to <code class="language-plaintext highlighter-rouge">f(x, y) ≡ 0 [p]</code>, given:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">f(x, y)</code> is a bivariate polynomial</li>
+  <li><code class="language-plaintext highlighter-rouge">x₀ &lt; X</code>, <code class="language-plaintext highlighter-rouge">y₀ &lt; Y</code> (bounds)</li>
+  <li>modulus <code class="language-plaintext highlighter-rouge">p</code> is known</li>
+</ul>
+
+<p>So we run : <code class="language-plaintext highlighter-rouge">H = multivariate_shift_polynomials(f, bounds=(2^271, 2^247), m=2, d=1)</code></p>
+
+<p>This constructs a lattice of shifted polynomials based on <code class="language-plaintext highlighter-rouge">f</code>, <code class="language-plaintext highlighter-rouge">m</code>, and <code class="language-plaintext highlighter-rouge">d</code>, performs LLL reduction, and attempts to extract a polynomial with small integer roots.</p>
+
+<h3 id="3-root-extraction"><span class="me-2">3. Root Extraction</span><a href="#3-root-extraction" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>Once the lattice is reduced, we try to extract <code class="language-plaintext highlighter-rouge">g(x, y)</code> that vanishes at the true <code class="language-plaintext highlighter-rouge">(s1, s2)</code>:
+<code class="language-plaintext highlighter-rouge">g = gcd(H[1][1], H[1][0])</code>
+The GCD of reduced polynomials in the basis often reveals a factorized form: <code class="language-plaintext highlighter-rouge">g(x, y) = (x - s1)(y - s2)</code> or similar
+So if we print g it will look like : 
+<code class="language-plaintext highlighter-rouge">172173800672395117345249995446056910949109406728104215721153693572084689971*x - 2473487831244918725787012641969681114920403880867347529915152738869122001520439638*y</code>
+So <code class="language-plaintext highlighter-rouge">(x,y)=2473487831244918725787012641969681114920403880867347529915152738869122001520439638 ,172173800672395117345249995446056910949109406728104215721153693572084689971</code> Is a root for g.</p>
+
+<h2 id="conclusion-1"><span class="me-2">Conclusion</span><a href="#conclusion-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p>Here is the full solve script written in sage :</p>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">long_to_bytes</span>
+<span class="nf">load</span><span class="p">(</span><span class="sh">'</span><span class="s">https://raw.githubusercontent.com/Connor-McCartney/coppersmith/main/coppersmith.sage</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">1337</span> <span class="o">+</span> <span class="mi">1337</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">1337</span><span class="o">**</span><span class="mi">1337</span>
+<span class="n">secretoustnin</span> <span class="o">=</span> <span class="sh">"</span><span class="s">0xaf67951fc756caf05e1cb834854880fa6b3919aa390a42a3f2cdcc1943b959192cebea290e4bbe41b517056b95903e9f6ec10d490fdde72cf17a7ab3e65d61fc9c0a750dc20d52626f78c7200744fb9bcc0e7b9f33dd5a83df5d05de7258404b5c56ced4b57e63ab0c7c4761ce76d789734d705e8e137a2000c678c5b90b1df6169499ef39184622d4f83a03985ba8038fdb05aae52d5f2c04f8b8f7a4ac2a54b3d0be67c71752</span><span class="sh">"</span>
+<span class="n">k</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">secretoustnin</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+
+<span class="n">PR</span><span class="p">.</span><span class="o">&lt;</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nc">PolynomialRing</span><span class="p">(</span><span class="nc">Zmod</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">c</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">k</span> <span class="o">*</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span>
+
+<span class="n">H</span> <span class="o">=</span> <span class="nf">multivariate_shift_polynomials</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="mi">271</span><span class="p">,</span> <span class="mi">2</span><span class="o">**</span><span class="mi">247</span><span class="p">),</span> <span class="n">m</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="n">g</span> <span class="o">=</span> <span class="nf">gcd</span><span class="p">(</span><span class="n">H</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="n">parts</span> <span class="o">=</span> <span class="n">g</span><span class="p">.</span><span class="nf">coefficients</span><span class="p">()</span>
+<span class="n">flag</span> <span class="o">=</span> <span class="sh">"</span><span class="s">L3AK{</span><span class="sh">"</span>
+<span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="n">flag</span><span class="o">+=</span><span class="nf">long_to_bytes</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="n">part</span><span class="p">)).</span><span class="nf">decode</span><span class="p">()</span>
+
+<span class="n">flag</span> <span class="o">+=</span><span class="sh">"</span><span class="s">}</span><span class="sh">"</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>It’s a realistic case of cryptanalysis that applies serious mathematical tools like lattices and polynomial rings — and shows how clever modeling can defeat strong-looking obfuscation,it was so fun and I learned a lot from it.</p>
 
 
   </div>
