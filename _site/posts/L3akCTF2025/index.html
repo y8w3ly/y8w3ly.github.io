@@ -45,7 +45,7 @@
 <meta property="twitter:title" content="L3akCTF2025" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-07-15T02:12:53-01:00","datePublished":"2025-07-14T10:16:00-01:00","description":"Writeups of challenges in solved in L3akCTF2025","headline":"L3akCTF2025","image":"http://localhost:4000/assets/img/L3ak25/icon.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/L3akCTF2025/"},"url":"http://localhost:4000/posts/L3akCTF2025/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-07-15T15:31:11-01:00","datePublished":"2025-07-14T10:16:00-01:00","description":"Writeups of challenges in solved in L3akCTF2025","headline":"L3akCTF2025","image":"http://localhost:4000/assets/img/L3ak25/icon.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/L3akCTF2025/"},"url":"http://localhost:4000/posts/L3akCTF2025/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -728,6 +728,71 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -775,6 +840,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -790,6 +866,72 @@
       
         
         
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
       
 
       
@@ -1105,7 +1247,7 @@
 
 <time
   
-  data-ts="1752549173"
+  data-ts="1752597071"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -1167,9 +1309,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1544 words"
+  title="2021 words"
 >
-  <em>8 min</em> read</span>
+  <em>11 min</em> read</span>
 
         </div>
       </div>
@@ -1301,13 +1443,19 @@
 <ul>
   <li>we all know that elliptic curves over finite fields satisfy the equation: <code class="language-plaintext highlighter-rouge">y^2 ≡ x^3 + ax + b [p]</code>.</li>
   <li>given that <code class="language-plaintext highlighter-rouge">p</code> and <code class="language-plaintext highlighter-rouge">q</code> lies on the curve then <code class="language-plaintext highlighter-rouge">y^2 - x^3 ≡ ax + b [p]</code>for any point on the curve.</li>
-  <li>so now lets take three points and compute <code class="language-plaintext highlighter-rouge">ri = yi^2 - xi ^3</code>, so we’ll have : 
--<code class="language-plaintext highlighter-rouge">r1 ≡ ax1 + b [p]</code>
--<code class="language-plaintext highlighter-rouge">r2 ≡ ax2 + b [p]</code>
--<code class="language-plaintext highlighter-rouge">r3 ≡ ax3 + b [p]</code></li>
-  <li>lets substract equations <code class="language-plaintext highlighter-rouge">r1-r2</code> and <code class="language-plaintext highlighter-rouge">r2-r3</code>:</li>
-  <li><code class="language-plaintext highlighter-rouge">r1 - r2 ≡ a(x1 - x2) [p]</code></li>
-  <li><code class="language-plaintext highlighter-rouge">r2 - r3 ≡ a(x2 - x3) [p]</code></li>
+  <li>so now lets take three points and compute <code class="language-plaintext highlighter-rouge">ri = yi^2 - xi ^3</code>, so we’ll have :
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">r1 ≡ ax1 + b [p]</code></li>
+      <li><code class="language-plaintext highlighter-rouge">r2 ≡ ax2 + b [p]</code></li>
+      <li><code class="language-plaintext highlighter-rouge">r3 ≡ ax3 + b [p]</code></li>
+    </ul>
+  </li>
+  <li>lets substract equations <code class="language-plaintext highlighter-rouge">r1-r2</code> and <code class="language-plaintext highlighter-rouge">r2-r3</code>:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">r1 - r2 ≡ a(x1 - x2) [p]</code></li>
+      <li><code class="language-plaintext highlighter-rouge">r2 - r3 ≡ a(x2 - x3) [p]</code></li>
+    </ul>
+  </li>
   <li>then we’ll have <code class="language-plaintext highlighter-rouge">(r₁ - r₂)/(x₁ - x₂) ≡ a [p]</code>, so in theory, this gives us <code class="language-plaintext highlighter-rouge">a</code>, but we don’t yet know <code class="language-plaintext highlighter-rouge">p</code>, so we can’t do this directly. However, if we build certain expressions from these <code class="language-plaintext highlighter-rouge">ri</code> they must vanish modulo <code class="language-plaintext highlighter-rouge">p</code>.</li>
   <li>To get rid of both <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code>, we construct the following expression : <code class="language-plaintext highlighter-rouge">xi * (rj - rk) + xj * (rk - ri) + xk * (ri - rj) ≡ 0 [p]</code></li>
   <li>if we do this for two or more points we can calculate their pgcd and get p.</li>
@@ -1316,14 +1464,18 @@
 <h4 id="2-recover-curve-coefficients-a-and-b"><span class="me-2">2. Recover Curve Coefficients <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code></span><a href="#2-recover-curve-coefficients-a-and-b" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <ul>
-  <li>with <code class="language-plaintext highlighter-rouge">p</code> known, plug in the coordinates of two points into the elliptic curve equation to form two equations:</li>
-  <li><code class="language-plaintext highlighter-rouge">r1 = y1^2 - x1^3 ≡ a*x1 + b [p]</code></li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">r2 = y2^2 - x2^3 ≡ a*x2 + b [p]</code></p>
+  <li>with <code class="language-plaintext highlighter-rouge">p</code> known, plug in the coordinates of two points into the elliptic curve equation to form two equations:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">r1 = y1^2 - x1^3 ≡ a*x1 + b [p]</code></li>
+      <li><code class="language-plaintext highlighter-rouge">r2 = y2^2 - x2^3 ≡ a*x2 + b [p]</code></li>
+    </ul>
   </li>
-  <li>Solving this simple linear system gives <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code>, such as :</li>
-  <li><code class="language-plaintext highlighter-rouge">a = ((r1 - r2) * ((x1 - x2)^(-1) % p)) % p</code></li>
-  <li><code class="language-plaintext highlighter-rouge">b = (r1 - a * x1) % p</code></li>
+  <li>Solving this simple linear system gives <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code>, such as :
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">a = ((r1 - r2) * ((x1 - x2)^(-1) % p)) % p</code></li>
+      <li><code class="language-plaintext highlighter-rouge">b = (r1 - a * x1) % p</code></li>
+    </ul>
+  </li>
 </ul>
 
 <h4 id="3-rebuild-the-curve-and-points"><span class="me-2">3. Rebuild the Curve and Points</span><a href="#3-rebuild-the-curve-and-points" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
@@ -1633,6 +1785,161 @@ So <code class="language-plaintext highlighter-rouge">(x,y)=24734878312449187257
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>It’s a realistic case of cryptanalysis that applies serious mathematical tools like lattices and polynomial rings — and shows how clever modeling can defeat strong-looking obfuscation,it was so fun and I learned a lot from it.</p>
+
+<h2 id="cryptobasic-lll"><span class="me-2">Crypto/Basic LLL</span><a href="#cryptobasic-lll" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p><a href="/assets/img/L3ak25/basic_lll.png" class="popup img-link shimmer"><img src="/assets/img/L3ak25/basic_lll.png" alt="Basic_LLL" loading="lazy"></a></p>
+
+<h3 id="challenge-overview-2"><span class="me-2">Challenge Overview</span><a href="#challenge-overview-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li><strong>Category</strong>: Crypto</li>
+  <li><strong>Name</strong>: Basic LLL</li>
+  <li><strong>Points</strong>: 50 (508 solves)</li>
+  <li><strong>Description</strong>: Simple crypto is the best crypto.</li>
+</ul>
+
+<h3 id="tldr-2"><span class="me-2">TL;DR</span><a href="#tldr-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>The challenge hides a prime number <code class="language-plaintext highlighter-rouge">p</code> inside an equation of the form <code class="language-plaintext highlighter-rouge">k = x*y + a*p</code>, where <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code> are small, but <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">p</code> are enormous <code class="language-plaintext highlighter-rouge">(1024-bit)</code>. Because the <code class="language-plaintext highlighter-rouge">x*y</code> term is small compared to <code class="language-plaintext highlighter-rouge">a*p</code>, we can approximate <code class="language-plaintext highlighter-rouge">p ≈ k / a</code>. With this recovered, we break RSA and retrieve the flag.</p>
+
+<h3 id="initial-analysis-2"><span class="me-2">Initial Analysis</span><a href="#initial-analysis-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>The description “Simple crypto is the best crypto.” hint directly that the structure is mathematically straightforward.</p>
+
+<p>We’re provided a sage script :</p>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">generate</span><span class="p">():</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="nf">random_prime</span><span class="p">(</span><span class="mi">2</span><span class="o">^</span><span class="mi">1024</span><span class="p">,</span> <span class="n">lbound</span><span class="o">=</span><span class="mi">2</span><span class="o">^</span><span class="mi">1023</span><span class="p">)</span>
+    <span class="n">x</span><span class="o">=</span><span class="nf">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">^</span><span class="mi">16</span><span class="p">)</span>
+    <span class="n">y</span><span class="o">=</span><span class="nf">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">^</span><span class="mi">256</span><span class="p">)</span>
+    <span class="n">a</span><span class="o">=</span><span class="nf">randint</span><span class="p">(</span><span class="mi">2</span><span class="o">^</span><span class="mi">1023</span><span class="p">,</span><span class="mi">2</span><span class="o">^</span><span class="mi">1024</span><span class="p">)</span>
+    <span class="n">q</span><span class="o">=</span><span class="nf">random_prime</span><span class="p">(</span><span class="mi">2</span><span class="o">^</span><span class="mi">1024</span><span class="p">)</span>
+    <span class="n">n</span><span class="o">=</span><span class="n">p</span><span class="o">*</span><span class="n">q</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">p</span>
+
+<span class="n">x</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="nf">generate</span><span class="p">()</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">+</span> <span class="n">a</span> <span class="o">*</span> <span class="n">p</span>
+<span class="n">e</span><span class="o">=</span><span class="mi">65537</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">a = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">n = </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">k = </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="sa">b</span><span class="sh">'</span><span class="s">L3AK{&lt;Redacted&gt;}</span><span class="sh">'</span>
+<span class="n">flag</span> <span class="o">=</span> <span class="nb">int</span><span class="p">.</span><span class="nf">from_bytes</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="sh">'</span><span class="s">big</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">c</span><span class="o">=</span> <span class="nf">pow</span><span class="p">(</span><span class="n">flag</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">c = </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>With all the values printed in the output.</p>
+
+<p>So we’re given :</p>
+<ul>
+  <li>A standard RSA modulus <code class="language-plaintext highlighter-rouge">n = p * q</code></li>
+  <li>A ciphertext <code class="language-plaintext highlighter-rouge">c ≡ flag^e [n]</code></li>
+  <li>The public exponent <code class="language-plaintext highlighter-rouge">e = 0x10001</code></li>
+  <li>And a side equation which will help us solve the challenge : <code class="language-plaintext highlighter-rouge">k = x * y + a * p</code></li>
+</ul>
+
+<p>So we must focus on <code class="language-plaintext highlighter-rouge">k</code> to break rsa and solve our challenge.</p>
+
+<h3 id="task-analysis-2"><span class="me-2">Task Analysis</span><a href="#task-analysis-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Let’s isolate the vulnerability.
+We are told: <code class="language-plaintext highlighter-rouge">k = x * y + a * p</code>
+We know:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">k</code> (given)</li>
+  <li><code class="language-plaintext highlighter-rouge">a</code> (given)</li>
+  <li><code class="language-plaintext highlighter-rouge">x*y</code> (is small compared to k*a)</li>
+  <li><code class="language-plaintext highlighter-rouge">p</code> is unknown (our goal)</li>
+</ul>
+
+<p>If we rearrange : <code class="language-plaintext highlighter-rouge">k = a * p + x * y</code>
+Then divide both sides by <code class="language-plaintext highlighter-rouge">a</code>: <code class="language-plaintext highlighter-rouge">k / a = p + (x * y) / a</code></p>
+
+<p>Note: <code class="language-plaintext highlighter-rouge">x*y ≈ 2^272</code>, while <code class="language-plaintext highlighter-rouge">a ≈ 2^1024</code> ⇒ <code class="language-plaintext highlighter-rouge">(x*y)/a ≈ 2^-752 ≈ 0</code></p>
+
+<p>So the fraction <code class="language-plaintext highlighter-rouge">(x*y)/a</code> is negligible: <code class="language-plaintext highlighter-rouge">k / a ≈ p</code></p>
+
+<p>This is the core vulnerability: we can recover <code class="language-plaintext highlighter-rouge">p</code> by computing <code class="language-plaintext highlighter-rouge">⌊k / a⌋</code>.</p>
+
+<h3 id="the-attack-2"><span class="me-2">The Attack</span><a href="#the-attack-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>If we do : <code class="language-plaintext highlighter-rouge">p = k // a</code></p>
+
+<p>we get the true <code class="language-plaintext highlighter-rouge">p</code>, because the leftover part <code class="language-plaintext highlighter-rouge">(x*y)/a</code> is strictly less than 1.</p>
+
+<p>This leaks one of the two RSA primes.
+With <code class="language-plaintext highlighter-rouge">p</code>, we can compute:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">q = n // p</code></li>
+  <li><code class="language-plaintext highlighter-rouge">phi(n) = (p - 1) * (q - 1)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">d = pow(e,-1,phi)</code></li>
+  <li>Then decrypt: <code class="language-plaintext highlighter-rouge">flag = pow(c,d,n)</code></li>
+</ul>
+
+<h3 id="conclusion-2"><span class="me-2">Conclusion</span><a href="#conclusion-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Here is the full solve script:</p>
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">long_to_bytes</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">12909957208634846878337953184362917609451224905637563117148705894888627434882610771803126452504238664471840340722310690445704139825753660053450331966698205860077330083433391290469454571152366284661640391190008258576947840075212180965738595761925516686689797153224716140447515370184846067654512660266993573880775530634588475842083212670090415716860925772115834314563453955681012820960922892736520042799257599331942717963921797157341454739255402633419216921702659541513141028779948257696746810146033667942181244847983610429227387863821351416689099862418820999250005071861968501333899759899513283613946626413863922604073</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">24474689179117620559916890529357882261493825442019850679598519081287156822984032786458479363048845076078220151760752906879055457682971398809768604333650029141164831566127754715775782823279839766009120238777348170982471623193652714921064243946655726118484337862412275391615166714375745390409664610412156281691721978732319253694004232933156865189917761521085635692596755802274763409871937618659197646864593743015558828475450200247766980008744319676783526158213931581034209356092026748307730083927225249093712227456855972520574747646873074625455900058136458828591335711677741591552501530047335481073272381631524755666119</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">11185314040721202177044508537272244264288033276739579716599246665772965854249656943282002695659011960313245796587834222078633141747802754149848079632693280265262199729548775879612614113828267471629389698999657686858047585254549801752634049341009476489652456620836030696102393122618822021082792763848220677651608135328630551380537642144416978955966827336280510774254681264136102268730343853559751471313539810499170669215479225898738527316798768622089152851154959800113070358637984124299357803777453137311143202502153552192970732744885328421213081964363890280109214401691255867427694709196120824176729643585687319321473</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">139534605978199350449870348663594126359773246906906418074945064315708552206952695156472923968554408862426942537522569163756593332601739006413404986641247624386522169136633429464195370373009454673819688653512479919153332504769835621608305089536245284458011218876474599059184828911301976396971466368457267831713</span>
+<span class="n">e</span> <span class="o">=</span> <span class="mh">0x10001</span>
+
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">k</span> <span class="o">//</span> <span class="n">a</span>
+<span class="n">q</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="n">p</span>
+
+<span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">q</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nf">pow</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">phi</span><span class="p">)</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="nf">pow</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">long_to_bytes</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></div></div>
+<p>I think this was an unintended solution</p>
 
 
   </div>
