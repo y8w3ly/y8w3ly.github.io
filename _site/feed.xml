@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>y8w3ly</title>
   <subtitle>Computer Science Student | Beginner CTF Player</subtitle>
-  <updated>2025-07-16T17:14:13-01:00</updated>
+  <updated>2025-07-16T17:15:58-01:00</updated>
   <author>
     <name>Yanis AITOUALI</name>
     <uri>http://localhost:4000/</uri>
@@ -50,9 +50,9 @@
   <entry>
     <title>1xbet</title>
     <link href="http://localhost:4000/posts/1xbet/" rel="alternate" type="text/html" title="1xbet" />
-    <published>2025-03-22T23:00:00-01:00</published>
+    <published>2025-02-22T23:00:00-01:00</published>
   
-    <updated>2025-07-16T17:13:51-01:00</updated>
+    <updated>2025-02-22T23:00:00-01:00</updated>
   
     <id>http://localhost:4000/posts/1xbet/</id>
     <content type="text/html" src="http://localhost:4000/posts/1xbet/" />
