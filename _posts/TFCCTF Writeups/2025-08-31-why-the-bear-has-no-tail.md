@@ -179,5 +179,5 @@ print(flag)
 
 And here is the flag : `TFCCTF{nowu4r5987489579_ready_to_b3AAAt58435945_online_casions????!847857w89478954w93894829384}`
 
-you can find the full solve script here[sol.py](/assets/files/tfcctf/sol.py)
+you can find the full solve script here[sol.py](/assets/files/tcfctf/chall.py)
 
