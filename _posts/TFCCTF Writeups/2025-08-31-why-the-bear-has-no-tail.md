@@ -11,7 +11,6 @@ toc_sticky: true
 excerpt: "Break python's PRNG with missing bits"
 ---
 
-# WHY THE BEAR HAS NO TAIL
 
 last weekend i played tfctf 2025 w my team @Trojeun (big thx to [TheFewChosen](https://ctftime.org/team/140885) for hosting) i somehow managed to solve this crypto chall (16th solve )
 
