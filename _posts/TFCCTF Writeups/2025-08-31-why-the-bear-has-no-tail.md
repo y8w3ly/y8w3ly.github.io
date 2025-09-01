@@ -70,7 +70,7 @@ Builds a key with `random.choices(range(256), k=len(FLAG))` and XORs it with the
     - recreate same key seq
     - xor and profit
 
-+ constraints
++ Constraints
     - mt state = 624×32 = 19968 bits
     - sample = 26 bits
     - need ~768 samples → we got 2000 so chill
@@ -103,28 +103,28 @@ So we understood that we need to submit each time the 26bits that we recieve fro
 
 ## The Attack
 
-### recovering known bits
+### Recovering known bits
 + script talks w server oracle
 + it gets 26 bits over n over
 + we store like 2000 samples of those
 
-### aligning With 32bit
+### Aligning With 32bit
 + once 26 bits are known, there are still 6 unknown bits left.
 + to ensure the guess is the correct full length (32bits), the script sends: `known_26_bits + 6 * '?'`
 + this acts as a checkpoint: the server validates the prefix (26 correct bits), while the last 6 are placeholders.
 
-### resetting for brute force
+### Resetting for brute force
 + then we submit:`32*'?'`
-+ you should ask why? → (honestly it came by chance)starting clean w all wildcards makes oracle happy
-+ looks like we “lost” 26 bits but nah they already confirmed earlier
-+ this reset avoids mismatch n lets us brute force clean
++ you should ask why? → (honestly it came by chance) because for each `random.choices` 2 32 bit uint random values are generated.
++ These 2 are used to generate the float which is used by `random.choices`.
++ We only recovered the first 26 bits of the total 64 generated internally.
 
-### recovering remaining bits n getting state
+### Recovering remaining bits n getting state
 + now we brute those 6 unknown bits step by step
 + once they’re done we get full 32bits out of each sample
 + after enough of those → boom mt state rebuilt
 
-### Ggetting key then flaglag
+### Getting key then flag
 + with `.get_random()` we regen state
 + then just call `rnd.choices(list(range(256)),k=95)` to rebuild key
 + xor enc bytes with key → flag pops out
